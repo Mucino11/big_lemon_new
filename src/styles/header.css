@@ -1,0 +1,12 @@
+.header-grid-container {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto auto auto;
+  grid-column-gap: 10px;
+  justify-content: space-between; /* This will push the logo to the left and the other items to the right */
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}

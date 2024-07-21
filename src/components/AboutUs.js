@@ -1,8 +1,9 @@
 import React from "react";
+import "../styles/aboutUs.css";
 
 function AboutUs() {
   return (
-    <section>
+    <section className="aboutUs-grid-container">
       <h2>About Us</h2>
       <p>
         We are a family-owned restaurant dedicated to serving the best to our

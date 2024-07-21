@@ -1,8 +1,9 @@
 import React from "react";
+import "../styles/menu.css";
 
 function Menu() {
   return (
-    <section>
+    <section className="gird-container-menu">
       <h2>Our Menu</h2>
       <ul>
         <li>Pizza - $10</li>
