@@ -1,0 +1,27 @@
+* {
+  margin: 20px;
+}
+.hero-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-image {
+  grid-column: 2; /* Place the image in the second column */
+  width: 80%; /* Ensure the image takes up the full width of the grid cell */
+  height: auto; /* Maintain aspect ratio of the image */
+}
+
+.hero-content {
+  grid-column: 1; /* Place content in the first column */
+}
+
+button {
+  margin-top: 10px; /* Optional: adds space above the button */
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
