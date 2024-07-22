@@ -1,13 +1,17 @@
 import React from "react";
 import "../styles/header.css";
+import logo from "../assets/logo.png";
 
 function Header() {
   return (
     <nav>
       <ul className="header-grid-container">
         <li>
-          <a href="/">Logo</a>
+          <a href="/">
+            <img className="header-image" src={logo} alt="Our Logo" />
+          </a>
         </li>
+
         <li>
           <a href="#home">Home</a>
         </li>
