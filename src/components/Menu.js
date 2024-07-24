@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/menu.css";
 import food1 from "../assets/food1.JPEG";
-import food2 from "../assets/food2.JPEG"; // Add more images if needed
-import food3 from "../assets/food3.JPEG"; // Add more images if needed
+import food2 from "../assets/food2.JPEG";
+import food3 from "../assets/food3.JPEG";
 
 function Menu() {
   return (
