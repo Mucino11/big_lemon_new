@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/header.css";
 import logo from "../assets/logo.png";
 
@@ -7,28 +8,21 @@ function Header() {
     <nav>
       <ul className="header-grid-container">
         <li>
-          <a href="/">
+          <Link to="/">
             <img className="header-image" src={logo} alt="Our Logo" />
-          </a>
-        </li>
-
-        <li>
-          <a href="#home">Home</a>
+          </Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#menu">Menu</a>
+          <Link to="#about">About</Link>
         </li>
         <li>
-          <a href="#reservations">Reservations</a>
+          <Link to="#menu">Menu</Link>
         </li>
         <li>
-          <a href="#order">Order online</a>
-        </li>
-        <li>
-          <a href="#login">Login</a>
+          <Link to="/order">Reservations</Link>
         </li>
       </ul>
     </nav>

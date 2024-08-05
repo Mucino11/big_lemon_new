@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -19,6 +19,46 @@ function App() {
       </Main>
       <Footer />
     </>
+  );
+}
+
+export default App;
+*/
+
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Hero from "./components/Hero";
+import Menu from "./components/Menu";
+import Testimonials from "./components/Testimonials";
+import AboutUs from "./components/AboutUs";
+import Footer from "./components/Footer";
+import OrderForm from "./components/resvervations/OrderForm";
+import "./styles/orderform.css";
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Menu />
+                <Testimonials />
+                <AboutUs />
+              </>
+            }
+          />
+          <Route path="/order" element={<OrderForm />} />
+        </Routes>
+      </Main>
+      <Footer />
+    </Router>
   );
 }
 

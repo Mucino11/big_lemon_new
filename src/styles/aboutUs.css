@@ -1,5 +1,27 @@
-.aboutUs-grid-container {
+.about-us-grid-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-us-image {
+  grid-column: 2; /* Place the image in the second column */
+  width: 60%; /* Ensure the image takes up the full width of the grid cell */
+  height: auto; /* Maintain aspect ratio of the image */
+  /*Positioninig*/
+}
+.change-image-position {
+  position: relative;
+  left: 190px;
+  bottom: 140px;
+
+  grid-column: 2;
+  width: 60%;
+  height: auto;
+}
+
+.hero-content {
+  grid-column: 1; /* Place content in the first column */
 }

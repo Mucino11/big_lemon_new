@@ -15,9 +15,14 @@
   border: 1px solid #ddd; /* Optional, for card border */
   padding: 10px;
   text-align: left;
+  width: 60%;
 }
 
 .testimonial-image {
-  width: 80%;
+  width: 60%;
   height: AUTO;
+}
+
+.testimonial-paragraph {
+  width: 60%;
 }

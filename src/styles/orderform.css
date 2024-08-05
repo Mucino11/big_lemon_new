@@ -1,0 +1,33 @@
+/* styles/orderForm.css */
+.order-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.order-form-container h2 {
+  margin-bottom: 20px;
+}
+
+.order-form-container input,
+.order-form-container textarea,
+.order-form-container button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.order-form-container button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.order-form-container button:hover {
+  background-color: #555;
+}

@@ -7,9 +7,6 @@ function Footer() {
       {/* Doormat Navigation */}
       <ul>
         <li>
-          <a href="/">Logo</a>
-        </li>
-        <li>
           <a href="#home">Home</a>
         </li>
         <li>
@@ -20,12 +17,6 @@ function Footer() {
         </li>
         <li>
           <a href="#reservations">Reservations</a>
-        </li>
-        <li>
-          <a href="#order">Order online</a>
-        </li>
-        <li>
-          <a href="#login">Login</a>
         </li>
       </ul>
 
