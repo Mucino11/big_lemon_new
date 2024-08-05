@@ -15,7 +15,7 @@ function Step4({
 }) {
   return (
     <div>
-      <h2>Step 4: Review and Edit</h2>
+      <h2>Review and Edit</h2>
       <div>
         <label>Number of Guests:</label>
         <input

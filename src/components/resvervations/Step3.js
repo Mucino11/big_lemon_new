@@ -13,7 +13,7 @@ function Step3({
 }) {
   return (
     <div>
-      <h2>Step 3: Choose Time</h2>
+      <h2>Choose Time</h2>
       <input
         type="time"
         value={time}

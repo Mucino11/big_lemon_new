@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../styles/hero.css";
 import hero from "../assets/hero.jpeg"; // Import the image
 
 function Hero() {
+  const navigate = useNavigate(); // Create an instance of useNavigate
+
+  const handleReservationClick = () => {
+    navigate("/order"); // Path to your OrderForm component
+  };
+
   return (
     <section className="hero-grid-container">
       <div className="hero-content">
@@ -14,7 +21,7 @@ function Hero() {
           sagittis ornare enim sit amet vestibulum. Proin fringilla convallis
           tellus vel finibus
         </p>
-        <button>Reserve Table</button>
+        <button onClick={handleReservationClick}>Reserve Table</button>
       </div>
       <img className="hero-image" src={hero} alt="pepper steak" />
     </section>

@@ -4,7 +4,7 @@ import React from "react";
 function Step2({ date, setDate, guests, setGuests, nextStep, prevStep }) {
   return (
     <div>
-      <h2>Step 2: Select Date</h2>
+      <h2>Select Date</h2>
       <input
         type="date"
         value={date}
