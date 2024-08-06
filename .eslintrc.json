@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true, // Enables browser global variables
+    "es6": true // Enables ES6 features
+  },
+  "globals": {
+    "fetchAPI": "readonly",
+    "submitAPI": "readonly"
+  },
+  "extends": "eslint:recommended", // Extends recommended ESLint rules
+  "rules": {
+    // Add your custom rules here
+  }
+}

@@ -1,4 +1,3 @@
-// Step3.js
 import React from "react";
 
 function Step3({
@@ -10,6 +9,7 @@ function Step3({
   setGuests,
   nextStep,
   prevStep,
+  slotError,
 }) {
   return (
     <div>
@@ -36,6 +36,7 @@ function Step3({
           min="1"
         />
       </div>
+      {slotError && <p className="error">{slotError}</p>}
       <button onClick={prevStep}>Back</button>
       <button onClick={nextStep}>Next</button>
     </div>
