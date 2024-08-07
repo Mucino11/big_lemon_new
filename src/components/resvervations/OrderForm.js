@@ -14,33 +14,29 @@ function OrderForm() {
   const [availableSlots, setAvailableSlots] = useState([]);
   const [slotError, setSlotError] = useState("");
 
-  // Example booked slots data
   const bookedSlots = {
     "2024-08-10": ["12:00", "14:00"],
-    // Add more dates and times as needed
   };
 
-  // Restricted booking hours
-  const restrictedPeriods = [
+  const restrictedHours = [
     { start: "11:00", end: "13:59" },
     { start: "21:00", end: "23:00" },
   ];
 
-  const isWithinRestrictedPeriod = (time) => {
-    return restrictedPeriods.some(({ start, end }) => {
+  const isRestrictedHour = (time) => {
+    return restrictedHours.some(({ start, end }) => {
       return time >= start && time <= end;
     });
   };
 
   const generateTimeSlots = () => {
     const slots = [];
-    for (let hour = 11; hour <= 21; hour++) {
-      // Ensure we generate till 21:30 only
+    for (let hour = 14; hour < 21; hour++) {
       for (let minute = 0; minute < 60; minute += 30) {
         const time = `${String(hour).padStart(2, "0")}:${String(
           minute
         ).padStart(2, "0")}`;
-        if (!isWithinRestrictedPeriod(time)) {
+        if (!isRestrictedHour(time)) {
           slots.push(time);
         }
       }
@@ -73,19 +69,25 @@ function OrderForm() {
     fetchAvailableSlots(newDate);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Submitting form data", { guests, date, time, info });
+    // Reset form or navigate away, etc.
+  };
+
   useEffect(() => {
     if (date) {
       fetchAvailableSlots(date);
     }
   }, [date]);
 
-  switch (step) {
-    case 1:
-      return (
+  return (
+    <form onSubmit={handleSubmit}>
+      {step === 1 && (
         <Step1 guests={guests} setGuests={setGuests} nextStep={nextStep} />
-      );
-    case 2:
-      return (
+      )}
+      {step === 2 && (
         <Step2
           date={date}
           setDate={handleDateChange}
@@ -94,9 +96,8 @@ function OrderForm() {
           nextStep={nextStep}
           prevStep={prevStep}
         />
-      );
-    case 3:
-      return (
+      )}
+      {step === 3 && (
         <Step3
           time={time}
           setTime={setTime}
@@ -108,9 +109,8 @@ function OrderForm() {
           prevStep={prevStep}
           slotError={slotError}
         />
-      );
-    case 4:
-      return (
+      )}
+      {step === 4 && (
         <Step4
           time={time}
           setTime={setTime}
@@ -123,9 +123,8 @@ function OrderForm() {
           nextStep={nextStep}
           prevStep={prevStep}
         />
-      );
-    case 5:
-      return (
+      )}
+      {step === 5 && (
         <Step5
           time={time}
           date={date}
@@ -133,10 +132,9 @@ function OrderForm() {
           info={info}
           prevStep={prevStep}
         />
-      );
-    default:
-      return <div>Invalid step</div>;
-  }
+      )}
+    </form>
+  );
 }
 
 export default OrderForm;
