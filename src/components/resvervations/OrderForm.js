@@ -13,11 +13,9 @@ function OrderForm() {
   const [info, setInfo] = useState("");
   const [availableSlots, setAvailableSlots] = useState([]);
   const [slotError, setSlotError] = useState("");
+  const [validationErrors, setValidationErrors] = useState({});
 
-  const bookedSlots = {
-    "2024-08-10": ["12:00", "14:00"],
-  };
-
+  // Restricted booking hours
   const restrictedHours = [
     { start: "11:00", end: "13:59" },
     { start: "21:00", end: "23:00" },
@@ -44,20 +42,37 @@ function OrderForm() {
     return slots;
   };
 
-  const fetchAvailableSlots = (selectedDate) => {
-    const bookedTimes = bookedSlots[selectedDate] || [];
-    const allSlots = generateTimeSlots();
-    const slots = allSlots.filter((time) => !bookedTimes.includes(time));
+  const fetchAvailableSlots = () => {
+    // Directly generate all available slots without filtering booked ones
+    const slots = generateTimeSlots();
     setAvailableSlots(slots);
   };
 
+  const validateStep = () => {
+    let errors = {};
+    if (step === 1) {
+      if (guests < 1) {
+        errors.guests = "Number of guests must be at least 1.";
+      }
+    } else if (step === 2) {
+      if (!date) {
+        errors.date = "Please select a date.";
+      }
+    } else if (step === 3) {
+      if (!time) {
+        errors.time = "Please select a time.";
+      }
+    }
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0; // Returns true if no errors
+  };
+
   const nextStep = () => {
-    if (step === 3 && !availableSlots.includes(time)) {
-      setSlotError(
-        "Selected time slot is unavailable. Please choose another time."
-      );
+    if (!validateStep()) {
       return;
     }
+
     setSlotError("");
     setStep(step + 1);
   };
@@ -66,19 +81,28 @@ function OrderForm() {
 
   const handleDateChange = (newDate) => {
     setDate(newDate);
-    fetchAvailableSlots(newDate);
+    fetchAvailableSlots();
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validateStep()) {
+      return;
+    }
+
+    // Form data as an array
+    const formDataArray = [guests, date, time, info];
+
+    // Log form data to console
+    console.log("Form data as array:", formDataArray);
+
     // Handle form submission logic here
     console.log("Submitting form data", { guests, date, time, info });
-    // Reset form or navigate away, etc.
   };
 
   useEffect(() => {
     if (date) {
-      fetchAvailableSlots(date);
+      fetchAvailableSlots();
     }
   }, [date]);
 
@@ -132,6 +156,18 @@ function OrderForm() {
           info={info}
           prevStep={prevStep}
         />
+      )}
+      <div className="errors">
+        {Object.values(validationErrors).map((error, index) => (
+          <div key={index} style={{ color: "red" }}>
+            {error}
+          </div>
+        ))}
+      </div>
+      {step === 5 && (
+        <button type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
       )}
     </form>
   );
