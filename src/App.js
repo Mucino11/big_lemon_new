@@ -36,6 +36,7 @@ import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import OrderForm from "./components/resvervations/OrderForm";
 import "./styles/orderform.css";
+import OmOss from "./components/OmOss";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
             }
           />
           <Route path="/order" element={<OrderForm />} />
+          <Route path="/omoss" element={<OmOss />} />
         </Routes>
       </Main>
       <Footer />

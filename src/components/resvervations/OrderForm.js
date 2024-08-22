@@ -122,18 +122,29 @@ function OrderForm() {
         />
       )}
       {step === 3 && (
-        <Step3
-          time={time}
-          setTime={setTime}
-          date={date}
-          setDate={handleDateChange}
-          guests={guests}
-          setGuests={setGuests}
-          nextStep={nextStep}
-          prevStep={prevStep}
-          slotError={slotError}
-        />
+        <>
+          <Step3
+            time={time}
+            setTime={setTime}
+            date={date}
+            setDate={handleDateChange}
+            guests={guests}
+            setGuests={setGuests}
+            nextStep={nextStep}
+            prevStep={prevStep}
+            slotError={slotError}
+          />
+          <div>
+            <h4>Available Time Slots:</h4>
+            <ul>
+              {availableSlots.map((slot, index) => (
+                <li key={index}>{slot}</li>
+              ))}
+            </ul>
+          </div>
+        </>
       )}
+
       {step === 4 && (
         <Step4
           time={time}

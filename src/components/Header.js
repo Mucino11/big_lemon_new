@@ -16,7 +16,7 @@ function Header() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="#about">About</Link>
+          <Link to="/OmOss">About</Link>
         </li>
         <li>
           <Link to="#menu">Menu</Link>

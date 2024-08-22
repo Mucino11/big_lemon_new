@@ -1,27 +1,52 @@
-.about-us-grid-container {
+/* Container for the entire section */
+.mission-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   gap: 20px;
   align-items: center;
+  padding: 40px;
 }
 
-.about-us-image {
-  grid-column: 2; /* Place the image in the second column */
-  width: 60%; /* Ensure the image takes up the full width of the grid cell */
-  height: auto; /* Maintain aspect ratio of the image */
-  /*Positioninig*/
+/* Styling for the textual content */
+.mission-content,
+.mission-goal {
+  grid-column: 1 / span 2;
 }
-.change-image-position {
-  position: relative;
-  left: 190px;
-  bottom: 140px;
 
-  grid-column: 2;
-  width: 60%;
+/* Image styling */
+.mission-image {
+  width: 100%;
   height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content {
-  grid-column: 1; /* Place content in the first column */
+/* Right-aligned image */
+.mission-image-right {
+  grid-column: 2;
+  justify-self: end;
+}
+
+/* Specific styling for the content area */
+.mission-content {
+  grid-column: 1 / span 2;
+  text-align: left;
+}
+
+.mission-goal {
+  grid-column: 1 / span 2;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .mission-container {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-image-right {
+    grid-column: 1;
+    justify-self: center;
+  }
 }
