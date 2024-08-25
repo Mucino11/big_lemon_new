@@ -1,52 +1,43 @@
-/* Container for the entire section */
-.mission-container {
+.about-us-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
 }
 
-/* Styling for the textual content */
-.mission-content,
-.mission-goal {
-  grid-column: 1 / span 2;
+.about-us-content {
+  grid-column: 1 / 2;
 }
 
-/* Image styling */
-.mission-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.about-us-image {
+  width: 60%;
+  object-fit: cover;
+  padding-left: 75px;
 }
 
-/* Right-aligned image */
-.mission-image-right {
-  grid-column: 2;
-  justify-self: end;
+.change-image-position {
+  margin-top: -120px;
+  margin-left: -70px;
+  margin-right: 80px;
+
+  /* Adjusts the overlap */
 }
 
-/* Specific styling for the content area */
-.mission-content {
-  grid-column: 1 / span 2;
-  text-align: left;
-}
-
-.mission-goal {
-  grid-column: 1 / span 2;
-  text-align: left;
-  margin-top: 20px;
-}
-
-/* Responsive behavior */
-@media (max-width: 768px) {
-  .mission-container {
+@media screen and (max-width: 768px) {
+  .about-us-grid-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .mission-image-right {
-    grid-column: 1;
-    justify-self: center;
+  .about-us-image,
+  .change-image-position {
+    grid-column: 1 / -1;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .change-image-position {
+    margin-top: 0;
   }
 }
