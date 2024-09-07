@@ -1,0 +1,164 @@
+{
+  "menuItems": [
+    {
+      "name": "Salmon Pasta",
+      "image": "food1",
+      "altText": "salmon pasta with herbs",
+      "price": "NOK 278",
+      "description": "Fresh salmon tossed with creamy Alfredo sauce and linguine, garnished with parsley.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Pepper Steak",
+      "image": "food2",
+      "altText": "pepper steak with vegetables",
+      "price": "NOK 315",
+      "description": "Juicy steak cooked with peppercorn sauce, served with sautéed vegetables and mashed potatoes.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Margherita Pizza",
+      "image": "food3",
+      "altText": "margherita pizza with fresh basil",
+      "price": "NOK 175",
+      "description": "Classic Italian pizza with fresh tomatoes, mozzarella cheese, and basil leaves.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Chicken Caesar Salad",
+      "image": "food4",
+      "altText": "chicken caesar salad with croutons",
+      "price": "NOK 149",
+      "description": "Grilled chicken breast on a bed of crisp romaine lettuce, topped with Caesar dressing, croutons, and Parmesan cheese.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Vegetable Stir-Fry",
+      "image": "food5",
+      "altText": "vegetable stir-fry with rice",
+      "price": "NOK 130",
+      "description": "Colorful mix of fresh vegetables stir-fried in a savory soy-ginger sauce, served with steamed rice.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Beef Tacos",
+      "image": "food6",
+      "altText": "beef tacos with salsa",
+      "price": "NOK 165",
+      "description": "Soft tortillas filled with seasoned beef, lettuce, cheese, salsa, and sour cream.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "image": "food7",
+      "altText": "spaghetti carbonara with Parmesan",
+      "price": "NOK 210",
+      "description": "Classic Italian pasta dish with pancetta, eggs, and Parmesan cheese, tossed in a creamy sauce.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Grilled Salmon",
+      "image": "food8",
+      "altText": "grilled salmon with lemon slices",
+      "price": "NOK 295",
+      "description": "Fresh salmon fillet grilled to perfection, served with a side of roasted potatoes and asparagus.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Mushroom Risotto",
+      "image": "food9",
+      "altText": "mushroom risotto with parsley",
+      "price": "NOK 190",
+      "description": "Creamy risotto with wild mushrooms, garlic, and a touch of white wine, garnished with parsley.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Prawn Pad Thai",
+      "image": "food10",
+      "altText": "prawn pad thai with lime",
+      "price": "NOK 225",
+      "description": "Stir-fried rice noodles with prawns, eggs, peanuts, bean sprouts, and a tangy tamarind sauce.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Chicken Tikka Masala",
+      "image": "food11",
+      "altText": "chicken tikka masala with naan",
+      "price": "NOK 245",
+      "description": "Tender chicken pieces cooked in a rich, spiced tomato sauce, served with basmati rice and naan bread.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Quinoa Salad",
+      "image": "food12",
+      "altText": "quinoa salad with avocado",
+      "price": "NOK 165",
+      "description": "A nutritious salad with quinoa, avocado, cherry tomatoes, cucumbers, and a lemon vinaigrette.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Seafood Paella",
+      "image": "food13",
+      "altText": "seafood paella with shrimp and mussels",
+      "price": "NOK 320",
+      "description": "Traditional Spanish dish with saffron rice, shrimp, mussels, clams, and bell peppers.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Lamb Chops",
+      "image": "food14",
+      "altText": "grilled lamb chops with rosemary",
+      "price": "NOK 350",
+      "description": "Grilled lamb chops marinated with rosemary and garlic, served with mint yogurt sauce.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Eggplant Parmesan",
+      "image": "food15",
+      "altText": "eggplant parmesan with melted cheese",
+      "price": "NOK 210",
+      "description": "Layers of breaded eggplant, marinara sauce, and melted mozzarella, baked to perfection.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Duck Confit",
+      "image": "food16",
+      "altText": "duck confit with potatoes",
+      "price": "NOK 380",
+      "description": "French-style slow-cooked duck leg served with crispy potatoes and a side salad.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Vegan Buddha Bowl",
+      "image": "food17",
+      "altText": "vegan buddha bowl with colorful veggies",
+      "price": "NOK 155",
+      "description": "A colorful bowl of quinoa, roasted chickpeas, avocado, kale, and a tahini dressing.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "BBQ Ribs",
+      "image": "food18",
+      "altText": "bbq ribs with coleslaw",
+      "price": "NOK 310",
+      "description": "Tender pork ribs glazed with BBQ sauce, served with coleslaw and fries.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Thai Green Curry",
+      "image": "food19",
+      "altText": "thai green curry with chicken",
+      "price": "NOK 235",
+      "description": "Spicy Thai green curry with chicken, coconut milk, bamboo shoots, and jasmine rice.",
+      "buttonText": "Order Now"
+    },
+    {
+      "name": "Fish and Chips",
+      "image": "food20",
+      "altText": "fish and chips with tartar sauce",
+      "price": "NOK 185",
+      "description": "Crispy battered fish fillets served with golden fries, tartar sauce, and a lemon wedge.",
+      "buttonText": "Order Now"
+    }
+  ]
+}
