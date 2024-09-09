@@ -34,8 +34,10 @@ import Menu from "./components/Menu";
 import Testimonials from "./components/Testimonials";
 import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
-import OrderForm from "./components/resvervations/OrderForm";
-import "./styles/orderform.css";
+// import OrderForm from "./components/resvervations/OrderForm";
+// import OrderForm from "./components/resvervations/OrderForm";
+import "./styles/order.css";
+
 import OmOss from "./components/OmOss";
 
 function App() {

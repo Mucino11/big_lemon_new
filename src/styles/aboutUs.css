@@ -3,41 +3,84 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
+  background-color: #f8f8f8; /* Light gray background */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px;
 }
 
 .about-us-content {
   grid-column: 1 / 2;
+  padding: 20px;
+}
+
+.about-us-content h2 {
+  font-size: 2.5rem;
+  color: #333; /* Dark gray for the heading */
+  margin-bottom: 15px;
+}
+
+.about-us-content p {
+  font-size: 1rem;
+  color: #666; /* Medium gray for the text */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn-more-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background for the link */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 .about-us-image {
   width: 60%;
   object-fit: cover;
   padding-left: 75px;
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for images */
 }
 
 .change-image-position {
   margin-top: -120px;
   margin-left: -70px;
   margin-right: 80px;
-
-  /* Adjusts the overlap */
+  position: relative;
+  z-index: 1; /* Layer the image for overlap effect */
 }
 
+/* Responsive Design for smaller screens */
 @media screen and (max-width: 768px) {
   .about-us-grid-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
+  .about-us-content {
+    padding: 10px;
+  }
+
   .about-us-image,
   .change-image-position {
     grid-column: 1 / -1;
-    width: 100%;
+    width: 40%;
     object-fit: cover;
+    padding-left: 0;
+    margin: 10px auto; /* Centers images on small screens */
   }
 
   .change-image-position {
     margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
