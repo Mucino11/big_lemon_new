@@ -13,20 +13,18 @@ function AboutUs() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis
           justo orci, vel interdum nunc malesuada et. Ut non turpis leo. Aenean
           sagittis ornare enim sit amet vestibulum. Proin fringilla convallis
-          tellus vel finibus.
+          tellus vel finibus
         </p>
         <Link to="OmOss" className="learn-more-link">
           Learn More About Us
         </Link>
       </div>
-      <div className="image-container">
-        <img className="about-us-image" src={chef} alt="chef" />
-        <img
-          className="about-us-image change-image-position"
-          src={restaurant}
-          alt="restaurant"
-        />
-      </div>
+      <img className="about-us-image" src={chef} alt="chef" />
+      <img
+        className="about-us-image, change-image-position"
+        src={restaurant}
+        alt="restaurant"
+      />
     </section>
   );
 }
