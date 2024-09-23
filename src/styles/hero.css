@@ -7,6 +7,7 @@
   grid-template-rows: auto;
   gap: 20px;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .hero-image {
@@ -18,10 +19,26 @@
 .hero-content {
   grid-column: 1; /* Place content in the first column */
 }
+.hero-content h1 {
+  font-size: 2.5em; /* Larger font size for the title */
+  margin-bottom: 10px; /* Space below the title */
+}
+.hero-content p {
+  margin: 10px 0; /* Space above and below paragraphs */
+  line-height: 1.6; /* Increase line height for readability */
+}
 
 button {
-  margin-top: 10px; /* Optional: adds space above the button */
-  background-color: black;
-  color: white;
-  border-radius: 8px;
+  margin-top: 20px; /* Space above the button */
+  background-color: black; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded button */
+  padding: 12px 20px; /* Inner spacing for button */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+button:hover {
+  background-color: #333; /* Darker background on hover */
 }

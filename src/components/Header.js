@@ -19,7 +19,7 @@ function Header() {
           <Link to="/OmOss">About</Link>
         </li>
         <li>
-          <Link to="#menu">Menu</Link>
+          <Link to="/MenuPage">Menu</Link>
         </li>
         <li>
           <Link to="/order">Reservations</Link>

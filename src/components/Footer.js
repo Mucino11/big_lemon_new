@@ -1,39 +1,50 @@
 import React from "react";
 import "../styles/footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer-grid-container">
-      {/* Doormat Navigation */}
       <ul>
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="/OmOss">About</Link>
         </li>
         <li>
-          <a href="#menu">Menu</a>
+          <Link to="/MenuPage">Menu</Link>
         </li>
         <li>
-          <a href="#reservations">Reservations</a>
+          <Link to="/order">Reservations</Link>
         </li>
+        <li />
       </ul>
 
       {/* Social Media Links */}
       <div className="footer-section">
         <h4>Follow Us</h4>
-        <ul>
-          <li>
-            <a href="https://facebook.com">Facebook</a>
-          </li>
-          <li>
-            <a href="https://twitter.com">Twitter</a>
-          </li>
-          <li>
-            <a href="https://instagram.com">Instagram</a>
-          </li>
-        </ul>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Facebook</p>
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Instagram</p>
+        </a>
+        <a
+          href="https://www.youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>YouTube</p>
+        </a>
       </div>
 
       {/* Contact Information */}

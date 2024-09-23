@@ -3,13 +3,16 @@ import "../styles/menu.css";
 import food1 from "../assets/food1.JPEG";
 import food2 from "../assets/food2.JPEG";
 import food3 from "../assets/food3.JPEG";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
     <section className="grid-container-menu">
       <div className="header-section">
         <h2>Special</h2>
-        <button>Online Menu</button>
+        <Link to="/MenuPage">
+          <button>See More Meals</button>
+        </Link>
       </div>
       <div className="cards-section">
         <div className="card">
@@ -20,7 +23,6 @@ function Menu() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis
             justo orci.
           </p>
-          <button>Order Now</button>
         </div>
         <div className="card">
           <img className="food-menu" src={food2} alt="dish" />
@@ -30,7 +32,6 @@ function Menu() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis
             justo orci.
           </p>
-          <button>Order Now</button>
         </div>
         <div className="card">
           <img className="food-menu" src={food3} alt="dish" />
@@ -40,9 +41,11 @@ function Menu() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis
             justo orci.
           </p>
-          <button>Order Now</button>
         </div>
       </div>
+      <Link to="/MenuPage">
+        <button>More Meals</button>
+      </Link>
     </section>
   );
 }
